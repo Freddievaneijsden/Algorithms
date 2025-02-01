@@ -7,17 +7,15 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BinarySearchTest {
 
-    int [] testArray = {1, 2, 3, 4, 5, 6, 7};
+    int [] testArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     @Test
-    void binarySearchReturnNegativeOne() {
-        int expectedValue = BinarySearch.binarySearch(testArray, 3);
-        assertThat(expectedValue).isEqualTo(-1);
+    void binarySearchReturnNegativeOneWhenTargetIsAbsent() {
+        assertThat(BinarySearch.binarySearch(testArray, 100)).isEqualTo(-1);
     }
 
     @Test
-    void binarySearchShouldReturnIndexWhenGivenNumber6() {
-        assertThat(BinarySearch.binarySearch(testArray, 6)).isEqualTo(5);
-
+    void binarySearchShouldReturnIndexWhenTargetIsFound() {
+        assertThat(BinarySearch.binarySearch(testArray, 10)).isEqualTo(9);
     }
 }

@@ -14,26 +14,32 @@ public class BinarySearch {
             if (target < list[midIndex]) {
                 highIndex = midIndex - 1;
                 midIndex = (lowIndex + highIndex) / 2;
-                System.out.println(lowIndex);
-                System.out.println(midIndex);
-                System.out.println(highIndex);
                 if (target == list[midIndex]) {
                     printWhenTargetIsFound(target, midIndex);
                     return midIndex;
+                }
+                else if (midIndex == lowIndex) {
+                    break;
                 }
             } else if (target > list[midIndex]) {
                 lowIndex = midIndex + 1;
                 midIndex = (lowIndex + highIndex) / 2;
-                System.out.println(lowIndex);
-                System.out.println(midIndex);
-                System.out.println(highIndex);
                 if (target == list[midIndex]) {
                     printWhenTargetIsFound(target, midIndex);
                     return midIndex;
                 }
+                else if (midIndex == highIndex) {
+                    break;
+                }
             }
         }
         return -1;
+    }
+
+    private static void printIndexPositions(int lowIndex, int midIndex, int highIndex) {
+        System.out.println(lowIndex);
+        System.out.println(midIndex);
+        System.out.println(highIndex);
     }
 
     public static void printWhenTargetIsFound(int target, int midIndex) {
