@@ -10,9 +10,9 @@ package search;
 
 public class Main {
     public static void main (String [] args) {
-        int [] sortedArray = {1, 2, 3, 4, 5, 6, 7};
+        int [] sortedArray = {1, 3, 7, 11, 15, 16, 22, 24};
 
-        BinarySearch.binarySearch(sortedArray, 6);
+        BinarySearch.binarySearch(sortedArray, 15);
 
     }
 }

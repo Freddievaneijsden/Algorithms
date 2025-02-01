@@ -14,4 +14,10 @@ public class BinarySearchTest {
         int expectedValue = BinarySearch.binarySearch(testArray, 3);
         assertThat(expectedValue).isEqualTo(-1);
     }
+
+    @Test
+    void binarySearchShouldReturnIndexWhenGivenNumber6() {
+        assertThat(BinarySearch.binarySearch(testArray, 6)).isEqualTo(5);
+
+    }
 }
