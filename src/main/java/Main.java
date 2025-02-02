@@ -10,10 +10,13 @@
 import search.BinarySearch;
 import sort.BubbleSort;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main (String [] args) {
 //        int[] sortedArray = {1, 3, 7, 11, 15, 16, 22, 24};
         int[] unsortedArray = {24, 7, 30 , 18, 15, 16, 22, 1};
+        Arrays.sort(unsortedArray);
 
 //
 //      BinarySearch.binarySearch(sortedArray, 24);
